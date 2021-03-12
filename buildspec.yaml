@@ -9,6 +9,7 @@ phases:
       - pip install ./Fw/Python
       - pip install ./Gds
       - yum -y install gcc cmake3
+      - sudo ln -s /usr/bin/cmake3 /usr/bin/cmake
   build:
     commands:
       - cd Ref
