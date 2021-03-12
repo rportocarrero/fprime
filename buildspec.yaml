@@ -12,7 +12,7 @@ phases:
       - wget https://github.com/Kitware/CMake/releases/download/v3.19.6/cmake-3.19.6.tar.gz
       - tar -xvzf cmake-3.19.6.tar.gz
       - cd cmake-3.19.6
-      - ./boostrap
+      - ./bootstrap
       - make
       - make install
       - cd ..
