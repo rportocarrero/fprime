@@ -5,11 +5,17 @@ phases:
     commands:
       - python3 -m venv ./fprime-venv
       - . ./fprime-venv/bin/activate
-      - pip install --upgrade wheel setuptools pip
-      - pip install ./Fw/Python
-      - pip install ./Gds
-      - yum -y install gcc cmake3
-      - ln -s /usr/bin/cmake3 /usr/bin/cmake
+      - pip3 install --upgrade wheel setuptools pip
+      - pip3 install ./Fw/Python
+      - pip3 install ./Gds
+      - yum -y install gcc
+      - wget https://github.com/Kitware/CMake/releases/download/v3.19.6/cmake-3.19.6.tar.gz
+      - tar -xvzf cmake-3.19.6.tar.gz
+      - cd cmake-3.19.6
+      - ./boostrap
+      - make
+      - make install
+      - cd ..
   build:
     commands:
       - cd Ref
