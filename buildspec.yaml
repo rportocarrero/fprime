@@ -8,6 +8,7 @@ phases:
       - pip install --upgrade wheel setuptools pip
       - pip install ./Fw/Python
       - pip install ./Gds
+      - yum -y install gcc cmake
   build:
     commands:
       - cd Ref
