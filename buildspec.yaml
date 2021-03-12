@@ -21,4 +21,6 @@ phases:
       - cd Ref
       - fprime-util generate
       - fprime-util build --jobs 32
-      - fprime-util install --jobs 32
+  post_build:
+      - fprime-util build --ut
+      - fprime-util check
