@@ -1,6 +1,13 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - python3 -m venv ./fprime-venv
+      - . ./fprime-venv/bin/activate
+      - pip install --upgrade wheel setuptools pip
+      - pip install ./Fw/Python
+      - pip install ./Gds
   build:
     commands:
       - cd Ref
