@@ -23,6 +23,6 @@ phases:
       - fprime-util build --jobs 32
   post_build:
     commands:
-      - fprime-util build --ut
       - fprime-util generate --ut
+      - fprime-util build --ut
       - fprime-util check
