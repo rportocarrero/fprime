@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../xml/ISF_Component_Schema.rnc" type="compact"?>
+<!-- GPS Tutorial: GpsApp/Gps/Commands.xml
+example of defining a command
+ -->
+<commands>
+    <!--Define a single command that runs asynchronously on the component's own thread. The opcode "0" is relative to
+    the GPS component's command space. THe mnemonic is astring a user will use to refer to this command-->
+    <command kind="async" opcode="0" mnemonic="Gps_ReportLockStatus">
+        <comment>A command to force an EVR reporting lock status.</comment>
+    </command>
+</commands>
